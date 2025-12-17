@@ -1,19 +1,19 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="preconnect" href="https:
-	<link rel="preconnect" href="https:
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	
 	<link rel="stylesheet" href="style/nav.css">
 	<link rel="stylesheet" href="style/cards.css">
 	<link rel="stylesheet" href="style/footer.css">
 	<link rel="stylesheet" href="style/root.css">
 	<link rel="stylesheet" href="style/back_to_top.css">
-	<link href="https:
-	<script src="https:
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Raleway&display=swap" rel="stylesheet">
+	<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 	<script src="scripts/scroll_to_contact.js"></script>
 	<title>SunSpot - Products</title>
 
@@ -73,6 +73,33 @@
 			align-items: center;
 			justify-content: center;
 			margin: 30px 0;
+			gap: 20px;
+			position: relative;
+		}
+
+		.slider-nav-btn {
+			font-size: 25px;
+			font-weight: bold;
+			background: linear-gradient(135deg, rgb(var(--brown-dark)), rgb(var(--accent)));
+			border: none;
+			border-radius: 50%;
+			color: white;
+			transition: all 0.3s ease;
+			width: 60px;
+			height: 60px;
+			cursor: pointer;
+			box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+			z-index: 10;
+		}
+
+		.slider-nav-btn:hover {
+			transform: scale(1.1) translateY(-3px);
+			box-shadow: 0 12px 30px rgba(255, 107, 107, 0.6);
+			background: linear-gradient(135deg, rgb(var(--accent)), rgb(var(--brown-dark)));
+		}
+
+		.nav {
+			display: none;
 		}
 
 .promo-banner {
@@ -283,15 +310,11 @@
 			}
 
 			.slider_buttons {
-				flex-direction: column;
-				gap: 20px;
+				flex-direction: row;
+				gap: 10px;
 			}
 
-			.nav {
-				margin: 0 !important;
-			}
-
-			.nav button {
+			.slider-nav-btn {
 				width: 50px;
 				height: 50px;
 				font-size: 20px;
@@ -407,7 +430,7 @@
 <body>
 	<header>
 		<h3 class="logo">SunSpot
-			<svg xmlns="http:
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="50" height="50" viewBox="0 0 100 100">
 				<g transform="translate(1.4065934065934016 1.4065934065934016) scale(1 1)">
 					<path d="M 45 68 c -12.682 0 -23 -10.317 -23 -23 c 0 -12.682 10.318 -23 23 -23 c 12.683 0 23 10.318 23 23 C 68 57.683 57.683 68 45 68 z" style="fill: rgb(var(--light));" />
 					<path d="M 38.652 17.61 c -0.292 0 -0.573 -0.127 -0.765 -0.356 c -0.239 -0.284 -0.301 -0.677 -0.161 -1.021 l 6.348 -15.61 C 44.227 0.247 44.593 0 45 0 s 0.773 0.247 0.926 0.623 l 6.349 15.61 c 0.14 0.344 0.077 0.737 -0.162 1.021 c -0.238 0.284 -0.616 0.414 -0.978 0.333 c -4.045 -0.881 -8.228 -0.881 -12.271 0 C 38.794 17.603 38.723 17.61 38.652 17.61 z" style="fill: rgb(var(--light));" />
@@ -438,24 +461,18 @@
 	</header>
 
 	<div class="slider_buttons">
-		<div class="nav" style="margin: 250px 0 0 300px;">
-			<button onclick="goPrev()"><</button>
-		</div>
-
+		<button class="slider-nav-btn prev-btn" onclick="goPrev()"><</button>
 		<div class="slider">
-			<img src="https:
-			<img src="https:
-			<img src="https:
-			<img src="https:
-			<img src="https:
-			<img src="https:
-			<img src="https:
-			<img src="https:
+			<img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800" alt="Slide 1" class="slide">
+			<img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800" alt="Slide 2" class="slide">
+			<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800" alt="Slide 3" class="slide">
+			<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800" alt="Slide 4" class="slide">
+			<img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=800" alt="Slide 5" class="slide">
+			<img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800" alt="Slide 6" class="slide">
+			<img src="https://images.unsplash.com/photo-1503602642458-232111445657?w=800" alt="Slide 7" class="slide">
+			<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800" alt="Slide 8" class="slide">
 		</div>
-
-		<div class="nav" style="margin: 250px 300px 0 0;">
-			<button onclick="goNext()">></button>
-		</div>
+		<button class="slider-nav-btn next-btn" onclick="goNext()">></button>
 	</div>
 
 <section class="promo-banner">

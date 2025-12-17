@@ -54,14 +54,16 @@
     background: linear-gradient(135deg, rgba(102, 126, 234, 0.6) 0%, rgba(118, 75, 162, 0.6) 100%);
 }
 
-.bgHeader{
-    width: 500px;
-    font-weight: bold;
-    padding-right: 600px;
-    font-size: 50px;
-    position: relative;
-    z-index: 1;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+.bgHeader {
+	width: auto;
+	max-width: 800px;
+	font-weight: bold;
+	padding: 0 50px;
+	font-size: 50px;
+	position: relative;
+	z-index: 1;
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+	text-align: center;
 }
 
 .bgimage2{
@@ -70,45 +72,53 @@
     border-radius: 10px;
 }
 
-.whatsNew{
-    display: flex;
-    justify-content: center;
-    padding: 30px 0;
-    padding-right: 50px;
-    background: linear-gradient(135deg, rgb(var(--dark)) 0%, #34495e 100%);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+.whatsNew {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 50px;
+	gap: 50px;
+	background: linear-gradient(135deg, rgb(var(--dark)) 0%, #34495e 100%);
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-.whatsNewLeft{
-    font-size: 24px;  
-    color: rgb(var(--light));
-}
-.whatsNewRight{
-    padding-top: 100px;
-    display: flex;
-    flex-direction: column;
-    padding-left: 100px;
-    justify-content: center;
-    width: 450px;
-    color: rgb(var(--light));
-
+.whatsNewLeft {
+	font-size: 24px;
+	color: rgb(var(--light));
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
 }
 
-.whatsNewRight>button{
-    margin-right: 240px;
-    display: inline-block;
-    padding: 12px 25px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    background: linear-gradient(135deg, rgb(var(--brown-dark)), rgb(var(--accent)));
-    border: none;
-    border-radius: 25px;
-    color: white;
-    transition: all 0.3s ease;
-    width: 35%;
-    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+.whatsNewRight {
+	padding-top: 0;
+	display: flex;
+	flex-direction: column;
+	padding-left: 0;
+	justify-content: center;
+	max-width: 500px;
+	color: rgb(var(--light));
+	gap: 15px;
+}
+
+.whatsNewRight>button {
+	margin: 0;
+	display: inline-block;
+	padding: 12px 25px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	background: linear-gradient(135deg, rgb(var(--brown-dark)), rgb(var(--accent)));
+	border: none;
+	border-radius: 25px;
+	color: white;
+	transition: all 0.3s ease;
+	width: auto;
+	max-width: 200px;
+	box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+	cursor: pointer;
 }
 
 .whatsNewRight>button:hover {
@@ -129,25 +139,38 @@
     text-decoration: underline;
 }
 
-.globalBrand{
-    padding: 50px 200px;
-    display: flex;
-    justify-content: center;
-    background-color: rgb(var(--light));
+.globalBrand {
+	padding: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+	background-color: rgb(var(--light));
+	flex-wrap: wrap;
 }
 
-.globalBrand1{
-    width: 350px;
-    height: 200px;
+.globalBrand1 {
+	max-width: 500px;
+	height: auto;
+	flex: 1;
+	min-width: 300px;
 }
 
-.bgimage3{
-    padding-top: 40px;
-    width: 630px;
-    height: 500px;
-    padding-left: 50px;
-    padding-right: 40px;
-    filter: grayscale(100%);
+.bgimage3 {
+	padding: 0;
+	width: 100%;
+	max-width: 600px;
+	height: auto;
+	flex: 1;
+	min-width: 300px;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	filter: grayscale(30%);
+	transition: filter 0.3s ease;
+}
+
+.globalBrand:hover .bgimage3 {
+	filter: grayscale(0%);
 }
 
 .facts{
@@ -227,6 +250,7 @@
 
 	.bgHeader {
 		width: 90%;
+		max-width: 100%;
 		padding: 0 20px;
 		font-size: 28px;
 		text-align: center;
@@ -234,22 +258,26 @@
 
 	.whatsNew {
 		flex-direction: column;
-		padding: 20px;
+		padding: 30px 20px;
+		gap: 30px;
 	}
 
 	.whatsNewLeft {
 		font-size: 18px;
 		text-align: center;
+		width: 100%;
 	}
 
 	.bgimage2 {
 		width: 100%;
+		max-width: 100%;
 		height: auto;
 	}
 
 	.whatsNewRight {
-		padding: 20px 0;
+		padding: 0;
 		width: 100%;
+		max-width: 100%;
 		text-align: center;
 	}
 
@@ -259,7 +287,8 @@
 
 	.whatsNewRight>button {
 		margin: 10px auto;
-		width: 70%;
+		width: auto;
+		max-width: 200px;
 	}
 
 	.globalBrand {
@@ -322,9 +351,10 @@
 
 @media (min-width: 769px) and (max-width: 1024px) {
 	.bgHeader {
-		width: 70%;
+		width: auto;
+		max-width: 700px;
 		font-size: 40px;
-		padding-right: 300px;
+		padding: 0 30px;
 	}
 
 	.whatsNew {
