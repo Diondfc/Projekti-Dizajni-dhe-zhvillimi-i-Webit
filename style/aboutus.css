@@ -12,13 +12,14 @@
 
 
 
-.top_header{
-    padding-left: 50px;
+.top_header {
+    padding: 16px 40px;
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
 }
-.second_header{
+
+.second_header {
     display: flex;
     padding: 4px 0;
     justify-content: center;
@@ -31,12 +32,13 @@
     color: white;
 }
 
-.bgfoto{
+.bgfoto {
     padding-top: 30px;
     background-image: url("../assets/bgimage.jpg");
     width: 100%;
     height: 500px;
-    background-size: 100% 150%;
+    background-size: cover;
+    background-position: center;
     display: flex;
     color: white;
     align-items: center;
@@ -54,16 +56,20 @@
     background: linear-gradient(135deg, rgba(102, 126, 234, 0.6) 0%, rgba(118, 75, 162, 0.6) 100%);
 }
 
+/* About Us hero header: centered, consistent with other section headers */
 .bgHeader {
-	width: auto;
+	width: 100%;
 	max-width: 800px;
+	margin: 0 auto;
 	font-weight: bold;
-	padding: 0 50px;
-	font-size: 50px;
+	padding: 0 40px;
+	font-size: clamp(1.65rem, 4vw, 50px);
 	position: relative;
 	z-index: 1;
 	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 	text-align: center;
+	line-height: 1.3;
+	box-sizing: border-box;
 }
 
 .bgimage2{
@@ -263,6 +269,12 @@
 		font-size: 1.65rem;
 		text-align: center;
 		line-height: 1.35;
+		box-sizing: border-box;
+	}
+
+	.second_header {
+		padding: 4px 18px;
+		justify-content: center;
 	}
 
 	.whatsNew {
