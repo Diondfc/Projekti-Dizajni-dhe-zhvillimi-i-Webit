@@ -218,11 +218,11 @@ if (isUserLoggedIn()) {
 			</svg>
 		</h3>
 		<nav>
-			<a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/index.php">Home</a>
-			<a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/products.php">Products</a>
-            <a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/aboutus.php">About Us</a>
+			<a href="/Projekt-UBT---Sem.-3/views/index.php">Home</a>
+			<a href="/Projekt-UBT---Sem.-3/views/products.php">Products</a>
+            <a href="/Projekt-UBT---Sem.-3/views/aboutus.php">About Us</a>
 			<a onclick="scrollToSection('foot')">Contact</a>
-            <a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/cart.php">Cart</a>
+            <a href="/Projekt-UBT---Sem.-3/views/cart.php">Cart</a>
 		</nav>
 		<nav class="login">
 			<a href="#">
@@ -340,7 +340,7 @@ if (isUserLoggedIn()) {
     const ordersList = document.getElementById("ordersList");
 
     // Fetch orders from the server
-    fetch('/Projekti-Dizajni-dhe-zhvillimi-i-Webit/controller/fetchFromOrder.php')
+    fetch('/Projekt-UBT---Sem.-3/controller/fetchFromOrder.php')
         .then(response => response.json())
         .then(data => {
             if (data.length === 0) {
@@ -405,7 +405,7 @@ if (isUserLoggedIn()) {
             <div class="aboutUs">
                 <h2 class="au">About Us</h2>
                 <div class="leftFooter">
-                    <a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/aboutus.php"><p>Who We Are</p></a>
+                    <a href="/Projekt-UBT---Sem.-3/views/aboutus.php"><p>Who We Are</p></a>
                     <a href="#"><p>Gift Cards</p></a>
                     <a href="#"><p>Sell on SunSpot</p></a>
                     <a href="#"><p>Advertise With Us</p></a>
@@ -419,7 +419,7 @@ if (isUserLoggedIn()) {
             <div class="costumerService">
                 <h2 class="cs">Costumer Service</h2>
                 <div class="midFooter">
-                    <a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/cart.php"><p>My Orders</p></a>
+                    <a href="/Projekt-UBT---Sem.-3/views/cart.php"><p>My Orders</p></a>
                     <a href="#"><p>Track My Order</p></a>
                     <a href="#"><p>Return Policy</p></a>
                     <a href="#"><p>Help Center</p></a>

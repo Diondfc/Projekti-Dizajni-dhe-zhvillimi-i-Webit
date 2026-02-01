@@ -1,4 +1,4 @@
-﻿function scrollToSection(section){
+function scrollToSection(section){
     const section1 = document.getElementById('foot');
     if(section==='foot'){
         section1.scrollIntoView({behavior:'smooth'});
@@ -7,9 +7,11 @@
         console.log('Invalid section!');
     }
 }
+
 window.onscroll=function(){
     showBackToTopButton();
 }
+
 function showBackToTopButton(){
     const button = document.getElementById('back-to-top');
     if(document.documentElement.scrollTop>20){
@@ -18,6 +20,7 @@ function showBackToTopButton(){
         button.style.display = 'none';
     }
 }
+
 function scrollToTop(){
     window.scrollTo({
         top:0,

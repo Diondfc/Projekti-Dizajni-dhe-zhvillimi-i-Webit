@@ -14,7 +14,7 @@ if(isset($_POST['logout-profile-btn'])){
 
     $userRepository->updateUser($id,$email,$username,$password,$role,$active);
 
-    header("location:/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/index.php");
+    header("location:/Projekt-UBT---Sem.-3/views/index.php");
 }
 
 ?>

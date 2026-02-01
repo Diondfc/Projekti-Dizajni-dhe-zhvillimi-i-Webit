@@ -55,12 +55,21 @@ class UserRepository{
     function getUserByEmailAndPassword($email,$password){
         $conn = $this->connection;
 
-        $sql = "SELECT * FROM users WHERE email=? AND password=? LIMIT 1";
-        $statement = $conn->prepare($sql);
-        $statement->execute([$email, $password]);
-        $user = $statement->fetch(PDO::FETCH_ASSOC);
+        $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
 
-        return $user ?: null;
+        $statement = $conn->query($sql);
+        
+        if ($statement->execute()) {
+            $user = $statement->fetch(PDO::FETCH_ASSOC);
+    
+            if ($user==null) {
+                return null;
+            } else {
+                return $user;
+            }
+        } else {
+            return null;
+        }
     }
 
     function updateUser($id,$email,$username,$password,$role,$active){

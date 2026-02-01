@@ -95,14 +95,14 @@ if (isUserLoggedIn()) {
 			</svg>
 		</h3>
 		<nav>
-			<a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/index.php">Home</a>
-			<a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/products.php">Products</a>
-            <a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/aboutus.php">About Us</a>
+			<a href="/Projekt-UBT---Sem.-3/views/index.php">Home</a>
+			<a href="/Projekt-UBT---Sem.-3/views/products.php">Products</a>
+            <a href="/Projekt-UBT---Sem.-3/views/aboutus.php">About Us</a>
 			<a onclick="scrollToSection('foot')">Contact</a>
-			<a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/cart.php">Cart</a>
+			<a href="/Projekt-UBT---Sem.-3/views/cart.php">Cart</a>
 		</nav>
 		<nav class="login">
-			<a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/signup.php" id="signupLink">
+			<a href="/Projekt-UBT---Sem.-3/views/signup.php" id="signupLink">
 				<svg width="30" height="30" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path
 						d="M335 343.43H65V300.06C65 254.02 102.33 216.69 148.37 216.69H251.63C297.67 216.69 335 254.02 335 300.06V343.43Z"
@@ -124,9 +124,9 @@ if (isUserLoggedIn()) {
                 if (active === 1) {   
                     event.preventDefault();
                     if(role === 'admin'){
-                        window.location.href = "/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/accountAdmin.php?id=" + userId;
+                        window.location.href = "/Projekt-UBT---Sem.-3/views/accountAdmin.php?id=" + userId;
                     }else{
-                        window.location.href = "/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/account.php?id=" + userId;
+                        window.location.href = "/Projekt-UBT---Sem.-3/views/account.php?id=" + userId;
                     }
                 } 
             });
@@ -304,7 +304,7 @@ if (isUserLoggedIn()) {
 
 		// 	// 
 
-		// 	window.location.href = 'http://localhost:8008/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/cart.php'; 
+		// 	window.location.href = 'http://localhost:8008/Projekt-UBT---Sem.-3/views/cart.php'; 
 		// }
 
 		// let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
@@ -320,13 +320,13 @@ if (isUserLoggedIn()) {
 					confirmButtonColor: 'rgb(var(--dark))',
 				}).then((result) => {
 					const baseUrl = window.location.origin;
-					window.location.href = baseUrl + '/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/signup.php';
+					window.location.href = baseUrl + '/Projekt-UBT---Sem.-3/views/signup.php';
 				});
 				return;
 			}
 			
 			try {
-				const response = await fetch('/Projekti-Dizajni-dhe-zhvillimi-i-Webit/controller/addToCartController.php', {
+				const response = await fetch('/Projekt-UBT---Sem.-3/controller/addToCartController.php', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',

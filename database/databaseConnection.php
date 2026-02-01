@@ -1,8 +1,7 @@
 <?php
 
 class DatabaseConenction{
-    private $server = "localhost";
-    private $port = "3306";
+    private $server="localhost:3306";
     private $username="root";
     private $password="";
     private $database = "sunspot_db";
@@ -11,7 +10,7 @@ class DatabaseConenction{
     function startConnection(){
 
         try{
-            $conn = new PDO("mysql:host=$this->server;port=$this->port;dbname=$this->database", $this->username, $this->password);
+            $conn = new PDO("mysql:host=$this->server;dbname=$this->database",$this->username,$this->password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $conn;
         }catch(PDOException $e){

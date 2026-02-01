@@ -34,10 +34,10 @@ if (isset($_POST['save-profile-btn'])) {
             // Proceed with the update
             if ($role === 'admin') {
                 $userRepository->updateUser($user_id, $email, $username, $password, $role, $originalUser->getActive());
-                header("location:/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/accountAdmin.php?id=$user_id");
+                header("location:/Projekt-UBT---Sem.-3/views/accountAdmin.php?id=$user_id");
             } elseif ($role === 'user') {
                 $userRepository->updateUser($user_id, $email, $username, $password, $role, $originalUser->getActive());
-                header("location:/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/account.php?id=$user_id");
+                header("location:/Projekt-UBT---Sem.-3/views/account.php?id=$user_id");
             }
             $_SESSION['Update_success'] = "User Updated";
         }

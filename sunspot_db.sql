@@ -338,7 +338,7 @@ VALUES
   (
     1,
     'diongjakova06@gmail.com',
-    'Dion',
+    'diongjakova',
     '12345678',
     'admin',
     0
