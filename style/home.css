@@ -1,140 +1,158 @@
-/* Work by Dion: Home page hero container with background image */
-.home_container{
-display:flex;
-flex-direction: row;
-justify-content: space-evenly;
-align-items: center;
-background-image: url(../assets/exploreimage2.webp);
-background-size: cover;
-position: relative;
-}
-.home_container::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: linear-gradient(135deg, rgba(102, 126, 234, 0.7) 0%, rgba(118, 75, 162, 0.7) 100%);
-}
-.hero {
-	position: relative;
-	z-index: 1;
-	flex-basis: 100% ;
-	height: calc(100vh - 90px);
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
-	color: rgb(var(--light));
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+footer {
+    background: linear-gradient(135deg, rgb(var(--dark)) 0%, #34495e 100%);
+    color: rgb(var(--light));
+    text-align: center;
+    width: 100%;
+    padding: 40px 0 20px 0;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
 }
 
-
-
-/* .right_side{
-	height: calc(100vh - 90px);
-	flex-basis: 30%;
-	background-color: rgba(var(--dark), 0.5);
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	align-items: center;
-} */
-
-.about_us {
-	width: 70%;
-}
-.contact{
-	width: 70%;
+.foot {
+    flex-wrap: wrap;
+    text-align: left;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; 
 }
 
-
-/* Work by Erjon: Call-to-action button styling with gradient and hover effects */
-.home_button{
-	text-decoration: none;
-	border: none;
-	background: linear-gradient(135deg, rgb(var(--brown-dark)), rgb(var(--accent)));
-	color: white;
-	border-radius: 50px;
-	width:auto;
-	height: 30px;
-	padding: 15px 40px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transition: all 0.3s ease;
-	box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
-	font-weight: 600;
-	letter-spacing: 0.5px;
-	text-transform: uppercase;
-	font-size: 14px;
-}
-.home_button:hover {
-	transform: translateY(-3px) scale(1.05);
-	box-shadow: 0 12px 35px rgba(255, 107, 107, 0.6);
-	background: linear-gradient(135deg, rgb(var(--accent)), rgb(var(--brown-dark)));
+.aboutUs{
+    display: flex;
+    flex-direction: column;
 }
 
-
-.home_title{
-	font-size: 40px;
-	font-family: "Dune_Rise";
+.au{
+    font-weight: bold;
+    font-size: x-large;
 }
 
-.home_desc{
-	font-family: 'Raleway';
-	font-size:22px;
+.leftFooter>a{
+    color: white;
+    text-decoration: none;
+}
+.leftFooter :hover{
+    color: rgb(var(--accent-light));
+    transform: translateX(5px);
+    transition: all 0.3s ease;
 }
 
-.right_side p {
-	font-size: 20px;
+.leftFooter :active{
+    color: grey;
 }
 
-.right_side>.contact>a{
-text-decoration: none;
+.costumerService{
+    display: flex;
+    flex-direction: column;
 }
 
-/* Work by Dion: Responsive home page design for mobile devices */
+.cs{
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.midFooter>a{
+    color: white;
+    text-decoration: none;
+}
+.midFooter :hover{
+    color: rgb(var(--accent-light));
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
+
+.midFooter :active{
+    color: grey;
+}
+
+.contactUs{
+    display: flex;
+    flex-direction: column;
+}
+
+.cu{
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.socialMedia img{
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s ease;
+}
+
+.socialMedia img:hover{
+    transform: translateY(-5px) scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Work by Dion: Responsive footer layout for mobile devices */
 @media (max-width: 768px) {
-	.hero {
+	footer {
+		padding: 20px 0 10px 0;
+	}
+
+	.foot {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 30px;
 		padding: 20px;
-		height: auto;
-		min-height: calc(100vh - 90px);
 	}
 
-	.home_title {
-		font-size: 28px;
-		text-align: center;
+	.aboutUs, .costumerService, .contactUs {
+		width: 100%;
 	}
 
-	.home_desc {
-		font-size: 16px;
-		text-align: center;
-		padding: 0 10px;
+	.au, .cs, .cu {
+		font-size: large;
 	}
 
-	.home_button {
-		padding: 12px 30px;
-		font-size: 12px;
+	.leftFooter, .midFooter, .rightFooter {
+		font-size: 14px;
 	}
 
-	.about_us, .contact {
-		width: 90%;
+	.termsOfUse {
+		flex-direction: column;
+		gap: 10px;
+		padding: 0;
+	}
+
+	.socialMedia {
+		display: flex;
+		gap: 15px;
+		justify-content: center;
 	}
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-	.home_title {
-		font-size: 35px;
+	.foot {
+		flex-wrap: wrap;
+		padding: 20px;
+		gap: 20px;
 	}
 
-	.home_desc {
-		font-size: 20px;
-	}
-
-	.home_button {
-		padding: 13px 35px;
-		font-size: 13px;
+	.aboutUs, .costumerService, .contactUs {
+		flex: 1 1 45%;
 	}
 }
+
+.termsOfUse{
+    padding-left: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.termsOfUse > a{
+  color: white;   
+  text-decoration: none;   
+}
+
+.termsOfUse :hover{
+    color: rgb(var(--accent-light));
+}
+
+.termsOfUse :active{
+    color: grey;
+}
+
+
