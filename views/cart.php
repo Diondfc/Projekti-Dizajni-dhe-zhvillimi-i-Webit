@@ -184,14 +184,14 @@ if (isUserLoggedIn()) {
 			</svg>
 		</h3>
 		<nav>
-			<a href="/Projekt-UBT---Sem.-3/views/index.php">Home</a>
-			<a href="/Projekt-UBT---Sem.-3/views/products.php">Products</a>
-            <a href="/Projekt-UBT---Sem.-3/views/aboutus.php">About Us</a>
+			<a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/index.php">Home</a>
+			<a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/products.php">Products</a>
+            <a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/aboutus.php">About Us</a>
 			<a onclick="scrollToSection('foot')">Contact</a>
             <a href="#">Cart</a>
 		</nav>
 		<nav class="login">
-			<a href="/Projekt-UBT---Sem.-3/views/signup.php" id="signupLink">
+			<a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/signup.php" id="signupLink">
 				<svg width="30" height="30" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path
 						d="M335 343.43H65V300.06C65 254.02 102.33 216.69 148.37 216.69H251.63C297.67 216.69 335 254.02 335 300.06V343.43Z"
@@ -213,9 +213,9 @@ if (isUserLoggedIn()) {
                 if (active === 1) {   
                     event.preventDefault();
                     if(role === 'admin'){
-                        window.location.href = "/Projekt-UBT---Sem.-3/views/accountAdmin.php?id=" + userId;
+                        window.location.href = "/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/accountAdmin.php?id=" + userId;
                     }else{
-                        window.location.href = "/Projekt-UBT---Sem.-3/views/account.php?id=" + userId;
+                        window.location.href = "/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/account.php?id=" + userId;
                     }
                 } 
             });
@@ -237,7 +237,7 @@ if (isUserLoggedIn()) {
             <div class="aboutUs">
                 <h2 class="au">About Us</h2>
                 <div class="leftFooter">
-                    <a href="/Projekt-UBT---Sem.-3/views/aboutus.php"><p>Who We Are</p></a>
+                    <a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/aboutus.php"><p>Who We Are</p></a>
                     <a href="#"><p>Gift Cards</p></a>
                     <a href="#"><p>Sell on SunSpot</p></a>
                     <a href="#"><p>Advertise With Us</p></a>
@@ -303,7 +303,7 @@ if (isUserLoggedIn()) {
 
     document.addEventListener('DOMContentLoaded', function () { 
     
-    fetch('/Projekt-UBT---Sem.-3/controller/fetchCartDataController.php')
+    fetch('/Projekti-Dizajni-dhe-zhvillimi-i-Webit/controller/fetchCartDataController.php')
         .then(response => response.json())
         .then(data => {
             console.log('Data received from the server:', data);
@@ -389,13 +389,13 @@ if (isUserLoggedIn()) {
                 confirmButtonColor: 'rgb(var(--dark))',
             }).then((result) => {
                 const baseUrl = window.location.origin;
-                window.location.href = baseUrl + '/Projekt-UBT---Sem.-3/views/signup.php';
+                window.location.href = baseUrl + '/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/signup.php';
             });
         }
 
         function removeItem(productId) {
             // Make a request to remove the item from the server
-            fetch(`/Projekt-UBT---Sem.-3/controller/removeFromCartController.php?productId=${productId}`, {
+            fetch(`/Projekti-Dizajni-dhe-zhvillimi-i-Webit/controller/removeFromCartController.php?productId=${productId}`, {
                 method: 'DELETE',
             })
                 .then(response => {
@@ -427,13 +427,13 @@ if (isUserLoggedIn()) {
                     confirmButtonColor: 'rgb(var(--dark))',
                 }).then((result) => {
                     const baseUrl = window.location.origin;
-                    window.location.href = baseUrl + '/Projekt-UBT---Sem.-3/views/signup.php';
+                    window.location.href = baseUrl + '/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/signup.php';
                 });
                 return;
             }
 
             try {
-                const response = await fetch('/Projekt-UBT---Sem.-3/controller/checkoutController.php', {
+                const response = await fetch('/Projekti-Dizajni-dhe-zhvillimi-i-Webit/controller/checkoutController.php', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -455,9 +455,9 @@ if (isUserLoggedIn()) {
                         // Redirect to account page (user remains logged in)
                         const baseUrl = window.location.origin;
                         if (userRole === 'admin') {
-                            window.location.href = baseUrl + '/Projekt-UBT---Sem.-3/views/accountAdmin.php?id=' + userId;
+                            window.location.href = baseUrl + '/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/accountAdmin.php?id=' + userId;
                         } else {
-                            window.location.href = baseUrl + '/Projekt-UBT---Sem.-3/views/account.php?id=' + userId;
+                            window.location.href = baseUrl + '/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/account.php?id=' + userId;
                         }
                     });
                 } else {

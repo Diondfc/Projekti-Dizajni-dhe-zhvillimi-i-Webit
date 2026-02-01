@@ -19,7 +19,7 @@ if(isset($_POST['editBtn'])){
 
     $admin_id = $_SESSION['id'];
 
-    header("location:/Projekt-UBT---Sem.-3/views/accountAdmin.php?id=$admin_id");
+    header("location:/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/accountAdmin.php?id=$admin_id");
 }
 
 ?>

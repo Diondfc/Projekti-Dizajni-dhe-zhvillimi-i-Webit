@@ -19,6 +19,8 @@ if (isUserLoggedIn()) {
     $role = $_SESSION['role'];
 }else{
     $userId = null;
+    $active = 0;
+    $role = '';
 }
 
 ?>
@@ -97,13 +99,13 @@ if (isUserLoggedIn()) {
         </h3>
         <nav>
             <a href="#">Home</a>
-            <a href="/Projekt-UBT---Sem.-3/views/products.php">Products</a>
-            <a href="/Projekt-UBT---Sem.-3/views/aboutus.php">About Us</a>
+            <a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/products.php">Products</a>
+            <a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/aboutus.php">About Us</a>
             <a onclick="scrollToSection('foot')">Contact</a>
-            <a href="/Projekt-UBT---Sem.-3/views/cart.php">Cart</a>
+            <a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/cart.php">Cart</a>
         </nav>
         <nav class="login">
-            <a href="/Projekt-UBT---Sem.-3/views/signup.php" id="signupLink">
+            <a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/signup.php" id="signupLink">
                 <svg width="30" height="30" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M335 343.43H65V300.06C65 254.02 102.33 216.69 148.37 216.69H251.63C297.67 216.69 335 254.02 335 300.06V343.43Z"
@@ -127,9 +129,9 @@ if (isUserLoggedIn()) {
                 if (active === 1) {   
                     event.preventDefault();
                     if(role === 'admin'){
-                        window.location.href = "/Projekt-UBT---Sem.-3/views/accountAdmin.php?id=" + userId;
+                        window.location.href = "/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/accountAdmin.php?id=" + userId;
                     }else{
-                        window.location.href = "/Projekt-UBT---Sem.-3/views/account.php?id=" + userId;
+                        window.location.href = "/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/account.php?id=" + userId;
                     }
                 } 
             });
@@ -143,7 +145,7 @@ if (isUserLoggedIn()) {
         <section class="hero">
             <h1 class="home_title">Welcome to SUNSPOT</h1>
             <p class="home_desc">Explore the latest in cutting-edge technology.</p>
-            <a href="/Projekt-UBT---Sem.-3/views/products.php" class="home_button">Discover Products</a>
+            <a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/products.php" class="home_button">Discover Products</a>
         </section>
 
     </div>
@@ -155,7 +157,7 @@ if (isUserLoggedIn()) {
             <div class="aboutUs">
                 <h2 class="au">About Us</h2>
                 <div class="leftFooter">
-                    <a href="/Projekt-UBT---Sem.-3/views/aboutus.php"><p>Who We Are</p></a>
+                    <a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/aboutus.php"><p>Who We Are</p></a>
                     <a href="#"><p>Gift Cards</p></a>
                     <a href="#"><p>Sell on SunSpot</p></a>
                     <a href="#"><p>Advertise With Us</p></a>
@@ -169,7 +171,7 @@ if (isUserLoggedIn()) {
             <div class="costumerService">
                 <h2 class="cs">Costumer Service</h2>
                 <div class="midFooter">
-                    <a href="/Projekt-UBT---Sem.-3/views/cart.php"><p>My Orders</p></a>
+                    <a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/cart.php"><p>My Orders</p></a>
                     <a href="#"><p>Track My Order</p></a>
                     <a href="#"><p>Return Policy</p></a>
                     <a href="#"><p>Help Center</p></a>

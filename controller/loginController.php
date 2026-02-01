@@ -24,14 +24,14 @@ if(isset($_POST['loginBtn'])){
             $_SESSION["active"] = 1;
             $_SESSION["role"] = $user['role'];
             $userRepository->updateUser($user['id'],$email,$user['username'],$password,$user['role'],$_SESSION["active"]);
-            header("location:/Projekt-UBT---Sem.-3/views/accountAdmin.php?id=$user[id]");
+            header("location:/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/accountAdmin.php?id=$user[id]");
         }
         else{
             $_SESSION["id"] = $user['id'];
             $_SESSION["active"] = 1;
             $_SESSION["role"] = $user['role'];
             $userRepository->updateUser($user['id'],$email,$user['username'],$password,$user['role'],$_SESSION["active"]);
-            header("location:/Projekt-UBT---Sem.-3/views/account.php?id=$user[id]");
+            header("location:/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/account.php?id=$user[id]");
         }
     }
 }

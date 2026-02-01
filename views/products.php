@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once __DIR__ . '/../config.php';
 
 function isUserLoggedIn() {
     return isset($_SESSION['id']);
@@ -147,14 +148,14 @@ if (isUserLoggedIn()) {
 			</svg>
 		</h3>
 		<nav>
-			<a href="/Projekt-UBT---Sem.-3/views/index.php">Home</a>
+			<a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/index.php">Home</a>
 			<a href="#">Products</a>
-            <a href="/Projekt-UBT---Sem.-3/views/aboutus.php">About Us</a>
+            <a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/aboutus.php">About Us</a>
 			<a onclick="scrollToSection('foot')">Contact</a>
-			<a href="/Projekt-UBT---Sem.-3/views/cart.php">Cart</a>
+			<a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/cart.php">Cart</a>
 		</nav>
 		<nav class="login">
-			<a href="/Projekt-UBT---Sem.-3/views/signup.php" id="signupLink">
+			<a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/signup.php" id="signupLink">
 				<svg width="30" height="30" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path
 						d="M335 343.43H65V300.06C65 254.02 102.33 216.69 148.37 216.69H251.63C297.67 216.69 335 254.02 335 300.06V343.43Z"
@@ -177,9 +178,9 @@ if (isUserLoggedIn()) {
                 if (active === 1) {   
                     event.preventDefault();
                     if(role === 'admin'){
-                        window.location.href = "/Projekt-UBT---Sem.-3/views/accountAdmin.php?id=" + userId;
+                        window.location.href = "/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/accountAdmin.php?id=" + userId;
                     }else{
-                        window.location.href = "/Projekt-UBT---Sem.-3/views/account.php?id=" + userId;
+                        window.location.href = "/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/account.php?id=" + userId;
                     }
                 } 
             });
@@ -195,14 +196,14 @@ if (isUserLoggedIn()) {
 		</div>
 
 			<div class="slider">
-					<a href="/Projekt-UBT---Sem.-3/views/item.php?id=1"><img src="https://cackle.co.nz/hardware/wp-content/uploads/sites/3/2023/06/510288-0.jpg" class="slide" alt="" ></a>
-					<a href="/Projekt-UBT---Sem.-3/views/item.php?id=2"><img src="https://www.business2community.com/wp-content/uploads/2013/04/HP-Envy-Spectre-XT-Review.jpg" class="slide" alt="" ></a>
-					<a href="/Projekt-UBT---Sem.-3/views/item.php?id=3"><img src="https://reviewed-com-res.cloudinary.com/image/fetch/s--NMTqMJpN--/b_white,c_limit,cs_srgb,f_auto,fl_progressive.strip_profile,g_center,q_auto,w_792/https://reviewed-production.s3.amazonaws.com/attachment/94d18a105bcf4a2d/Dell-Inspiron-14-7420-About.jpg" class="slide" alt="" ></a>
-					<a href="/Projekt-UBT---Sem.-3/views/item.php?id=4"><img src="https://laptopmedia.com/wp-content/uploads/2020/12/Aspire5_KSP6.jpg" class="slide" alt="" ></a>
-					<a href="/Projekt-UBT---Sem.-3/views/item.php?id=5"><img src="https://cdn.mos.cms.futurecdn.net/Q2eW2m6uASnYsWRn5m7mr4.jpg" class="slide" alt="" ></a>
-					<a href="/Projekt-UBT---Sem.-3/views/item.php?id=6"><img src="https://www.apple.com/v/ipad-pro/am/images/overview/hero/hero_combo__fcqcc3hbzjyy_large.jpg" class="slide" alt="" ></a>
-					<a href="/Projekt-UBT---Sem.-3/views/item.php?id=7"><img src="https://external-preview.redd.it/hv_h2fMMFVz19ifVH9vHmVL_2-tOqlTt9bPmu7GZyXo.jpg?auto=webp&s=5ec5a6149ced1076ded1941ee8cb18d3e0eae603" class="slide" alt="" ></a>
-					<a href="/Projekt-UBT---Sem.-3/views/item.php?id=8"><img src="https://www.pcworld.com/wp-content/uploads/2023/04/fitbitlineup-100900381-orig.jpg?quality=50&strip=all&w=1024" class="slide" alt="" ></a>
+					<a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/item.php?id=1"><img src="https://cackle.co.nz/hardware/wp-content/uploads/sites/3/2023/06/510288-0.jpg" class="slide" alt="" ></a>
+					<a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/item.php?id=2"><img src="https://www.business2community.com/wp-content/uploads/2013/04/HP-Envy-Spectre-XT-Review.jpg" class="slide" alt="" ></a>
+					<a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/item.php?id=3"><img src="https://reviewed-com-res.cloudinary.com/image/fetch/s--NMTqMJpN--/b_white,c_limit,cs_srgb,f_auto,fl_progressive.strip_profile,g_center,q_auto,w_792/https://reviewed-production.s3.amazonaws.com/attachment/94d18a105bcf4a2d/Dell-Inspiron-14-7420-About.jpg" class="slide" alt="" ></a>
+					<a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/item.php?id=4"><img src="https://laptopmedia.com/wp-content/uploads/2020/12/Aspire5_KSP6.jpg" class="slide" alt="" ></a>
+					<a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/item.php?id=5"><img src="https://cdn.mos.cms.futurecdn.net/Q2eW2m6uASnYsWRn5m7mr4.jpg" class="slide" alt="" ></a>
+					<a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/item.php?id=6"><img src="https://www.apple.com/v/ipad-pro/am/images/overview/hero/hero_combo__fcqcc3hbzjyy_large.jpg" class="slide" alt="" ></a>
+					<a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/item.php?id=7"><img src="https://external-preview.redd.it/hv_h2fMMFVz19ifVH9vHmVL_2-tOqlTt9bPmu7GZyXo.jpg?auto=webp&s=5ec5a6149ced1076ded1941ee8cb18d3e0eae603" class="slide" alt="" ></a>
+					<a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/item.php?id=8"><img src="https://www.pcworld.com/wp-content/uploads/2023/04/fitbitlineup-100900381-orig.jpg?quality=50&strip=all&w=1024" class="slide" alt="" ></a>
 			</div>
 
 		<div class="nav" style="margin: 250px 300px 0 0;">
@@ -250,7 +251,7 @@ if (isUserLoggedIn()) {
 
 		let fetchedProduct;
 		
-		fetch('/Projekt-UBT---Sem.-3/controller/fetchProducts.php')
+		fetch('/Projekti-Dizajni-dhe-zhvillimi-i-Webit/controller/fetchProducts.php')
 			.then(response => response.json())
 			.then(data => {
 				const container = document.getElementById('card-container');
@@ -303,7 +304,7 @@ if (isUserLoggedIn()) {
 					container.appendChild(card);
 
 					card.addEventListener('click', () => {
-						window.location.replace('/Projekt-UBT---Sem.-3/views/item.php?id=' + device.id)
+						window.location.replace('/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/item.php?id=' + device.id)
 					})
 
 				
@@ -331,7 +332,7 @@ if (isUserLoggedIn()) {
 			// 	cartItems.push(product);
 			// 	localStorage.setItem('cartItems', JSON.stringify(cartItems));
 
-			// 	window.location.href = 'http://localhost:8008/Projekt-UBT---Sem.-3/views/cart.php'; 
+			// 	window.location.href = 'http://localhost:8008/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/cart.php'; 
 			// }
 
 	</script>
@@ -357,7 +358,7 @@ if (isUserLoggedIn()) {
 		<div class="costumerService">
 			<h2 class="cs">Costumer Service</h2>
 			<div class="midFooter">
-				<a href="/Projekt-UBT---Sem.-3/views/cart.php"><p>My Orders</p></a>
+				<a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/cart.php"><p>My Orders</p></a>
 				<a href="#"><p>My Account</p></a>
 				<a href="#"><p>Track My Order</p></a>
 				<a href="#"><p>Return Policy</p></a>

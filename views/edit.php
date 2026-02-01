@@ -92,11 +92,11 @@ $user = $userRepository->getUserById($userId);
 			</svg>
 		</h3>
 		<nav>
-			<a href="/Projekt-UBT---Sem.-3/views/index.php">Home</a>
-			<a href="/Projekt-UBT---Sem.-3/views/products.html">Products</a>
-            <a href="/Projekt-UBT---Sem.-3/views/aboutus.html">About Us</a>
+			<a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/index.php">Home</a>
+			<a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/products.html">Products</a>
+            <a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/aboutus.html">About Us</a>
 			<a onclick="scrollToSection('foot')">Contact</a>
-            <a href="/Projekt-UBT---Sem.-3/views/cart.html">Cart</a>
+            <a href="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/views/cart.html">Cart</a>
 		</nav>
 		<nav class="login">
 			<a href="#">
@@ -124,7 +124,7 @@ $user = $userRepository->getUserById($userId);
 			<input type="checkbox" id="chk" aria-hidden="true">
 
 			<div class="signup">
-				<form action="/Projekt-UBT---Sem.-3/controller/editController.php" method="post" onsubmit="return validateSignUp()" novalidate>
+				<form action="/Projekti-Dizajni-dhe-zhvillimi-i-Webit/controller/editController.php" method="post" onsubmit="return validateSignUp()" novalidate>
 					<label for="chk" aria-hidden="true" class="title" style="margin-top: 10px;">Edit User</label>
                     <label for="id" class="contents">Id:</label>
                     <input type="text" name="edit_id" value="<?=$user['id']?>" readonly><br><br><br>
