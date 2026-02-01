@@ -240,25 +240,34 @@
     transform: scale(1.02);
 }
 
-/* Work by Dion: Responsive About Us page for mobile devices */
+/* ========== MOBILE: About Us page ========== */
 @media (max-width: 768px) {
+	/* About Us page header row: remove large left padding */
+	.top_header {
+		padding: 16px 18px;
+		flex-wrap: wrap;
+	}
+
 	.bgfoto {
 		height: 300px;
 		background-size: cover;
 		padding-top: 20px;
 	}
 
+	/* About Us hero header: center, no overflow, consistent with other section headers */
 	.bgHeader {
-		width: 90%;
+		width: 100%;
 		max-width: 100%;
-		padding: 0 20px;
-		font-size: 28px;
+		margin: 0 auto;
+		padding: 0 18px;
+		font-size: 1.65rem;
 		text-align: center;
+		line-height: 1.35;
 	}
 
 	.whatsNew {
 		flex-direction: column;
-		padding: 30px 20px;
+		padding: 30px 18px;
 		gap: 30px;
 	}
 
@@ -293,7 +302,7 @@
 
 	.globalBrand {
 		flex-direction: column;
-		padding: 30px 20px;
+		padding: 30px 18px;
 	}
 
 	.globalBrand1 {
@@ -313,7 +322,7 @@
 
 	.facts {
 		height: auto;
-		padding: 40px 20px;
+		padding: 40px 18px;
 	}
 
 	.facts h1 {
@@ -334,7 +343,7 @@
 	.exploreUs {
 		flex-direction: column;
 		align-items: center;
-		padding: 20px;
+		padding: 20px 18px;
 	}
 
 	.exploreUsBox {

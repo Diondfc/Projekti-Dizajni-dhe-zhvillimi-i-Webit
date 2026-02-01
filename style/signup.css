@@ -97,15 +97,16 @@ input{
 	transform: scale(.6);
 }
 
+/* ========== MOBILE: Signup / login form ========== */
 @media (max-width: 768px) {
 	.main {
-		padding: 30px 10px;
+		padding: 30px 18px;
 		min-height: 60vh;
 	}
 
 	.forms {
-		width: 90%;
-		max-width: 350px;
+		width: 100%;
+		max-width: 340px;
 		height: 450px;
 	}
 

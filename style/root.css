@@ -26,3 +26,43 @@ body {
 	src: url(../Dune_Rise.ttf);
 }
 
+/* ========== MOBILE (iPhone / max-width: 768px) ========== */
+@media (max-width: 768px) {
+	/* Prevent horizontal scrolling */
+	:root {
+		min-width: 0;
+	}
+	html, body {
+		overflow-x: hidden;
+	}
+	* {
+		box-sizing: border-box;
+	}
+	/* Section padding so text doesn't touch screen edges */
+	main, section {
+		padding-left: 18px;
+		padding-right: 18px;
+	}
+	/* Typography: slightly smaller headings, better line-height */
+	h1 {
+		font-size: 1.75rem;
+		line-height: 1.35;
+	}
+	h2 {
+		font-size: 1.5rem;
+		line-height: 1.4;
+	}
+	h3 {
+		font-size: 1.25rem;
+		line-height: 1.4;
+	}
+	p {
+		line-height: 1.6;
+	}
+	/* Responsive images: prevent overflow on small screens */
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
